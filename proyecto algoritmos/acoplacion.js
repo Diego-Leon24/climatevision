@@ -5,7 +5,7 @@ const weatherInfo = document.getElementById('weatherInfo');
 const forecastContainer = document.getElementById('forecastContainer');
 
 let mostrandoClimaActual = true;
-
+// La función mostrarClimaActual se utiliza para mostrar información del clima actual en una página web
 function mostrarClimaActual(datos) {
     const weatherInfoHTML = `
     <div class="weather-grid">
@@ -42,7 +42,7 @@ function mostrarClimaActual(datos) {
     getForecastBtn.style.display = 'block';
     mostrandoClimaActual = true;
 }
-
+// La función mostrarPronóstico se utiliza para mostrar el pronóstico del clima en una página web.
 function mostrarPronostico(pronostico) {
 
     forecastContainer.innerHTML = ''; // Limpiar el contenido del contenedor antes de mostrar el pronóstico
@@ -85,6 +85,7 @@ function mostrarPronostico(pronostico) {
     mostrandoClimaActual = false;
 }
 
+//se utilizan para dar formato a las fechas y horas en un estilo legible para los usuarios.
 function formatoFecha(fecha) {
     const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Intl.DateTimeFormat('es-ES', opciones).format(fecha);
@@ -94,12 +95,13 @@ function formatoFechaHora(fecha) {
     return new Intl.DateTimeFormat('es-ES', opciones).format(fecha);
 }
 
+// se utiliza para ocultar la información del clima actual en la interfaz.
 function ocultarClimaActual() {
     weatherInfo.style.display = 'none';
 }
 
 
-
+// genera un fragmento de HTML que representa un elemento de pronóstico climático.
 function crearElementoPronostico(fechaHora, tempMax, tempMin, presion, humedad, velocidadViento) {
     return `
         <div class="weather-item">
@@ -118,6 +120,7 @@ function crearElementoPronostico(fechaHora, tempMax, tempMin, presion, humedad, 
     `;
 }
 
+//permite a los usuarios ingresar el nombre de una ciudad, obtener datos climáticos actuales de esa ciudad desde la API de OpenWeather
 getWeatherBtn.addEventListener('click', () => {
     const city = cityInput.value;
     const api_key = '88b6734f5a84e549f6701904dd412611';
@@ -134,11 +137,12 @@ getWeatherBtn.addEventListener('click', () => {
         });
 });
 
+//ocultar el contenedor que muestra el pronóstico del clima en la interfaz de la aplicación
 function ocultarPronostico() {
-    forecastContainer.style.display = 'none'; // Usar forecastContainer en lugar de pronosticoContainer
+    forecastContainer.style.display = 'none'; 
 }
 
-
+// está diseñado para obtener el pronóstico del clima para una ciudad ingresada por el usuario cuando hacen clic en un botón
 getForecastBtn.addEventListener('click', () => {
     const city = cityInput.value;
     const api_key = '88b6734f5a84e549f6701904dd412611';
@@ -146,6 +150,7 @@ getForecastBtn.addEventListener('click', () => {
     ocultarClimaActual();
 });
 
+// esta función se utiliza para obtener datos de pronóstico del clima de OpenWeather para una ciudad específica, procesar los datos y mostrarlos
 function obtenerPronostico(ciudad, api_key) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${ciudad}&appid=${api_key}&units=metric`;
 
@@ -206,10 +211,12 @@ function mostrarTendencias(humedadPromedio, velocidadVientoPromedio, presionProm
     const trendsContainer = document.getElementById('trendsContainer');
     trendsContainer.style.display = 'block';
 }
+
 // Agrega el botón de calidad del aire
 const getAirQualityBtn = document.getElementById('getAirQualityBtn');
 getAirQualityBtn.addEventListener('click', obtenerCalidadDelAire);
 
+// se encarga de obtener datos de calidad del aire para una ciudad específica y mostrarlos en la interfaz de usuario
 function obtenerCalidadDelAire() {
     const city = cityInput.value;
     const api_key = '88b6734f5a84e549f6701904dd412611'; // Reemplaza con tu clave API
@@ -259,6 +266,7 @@ fetch(geocodingApiUrl)
 
 }
 
+//  se encarga de obtener datos de calidad del aire para una ciudad específica y mostrarlos en la interfaz de usuario.
 function mostrarCalidadDelAire(so2, no2, pm10, pm25, o3, co) {
     const calidadAireInfo = document.getElementById('calidadAireInfo');
     calidadAireInfo.innerHTML = `
@@ -273,5 +281,3 @@ function mostrarCalidadDelAire(so2, no2, pm10, pm25, o3, co) {
     ocultarPronostico(); // Ocultar el pronóstico al mostrar los datos actuales
     ocultarClimaActual()
 }
-
-
