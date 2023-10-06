@@ -1,0 +1,39 @@
+
+
+
+(prediccion de datos en 100)
+150/150 [==============================] - 0s 715us/step
+Tmaxima:
+Error absoluto medio (MAE): 0.8490130408943959
+Error cuadrado medio (MSE): 1.0762189353223222
+Error porcentual absoluto medio (MAPE): 0.0316837912956225
+Coeficiente de determinaci n (R-squared): 0.9995850319983588
+Tminima:
+Error absoluto medio (MAE): 1.1979569206971705
+Error cuadrado medio (MSE): 1.9926670743959427
+Error porcentual absoluto medio (MAPE): 0.08480586736131424
+Coeficiente de determinaci n (R-squared): 0.9990393673906588
+O3:
+Error absoluto medio (MAE): 0.8829059101222998
+Error cuadrado medio (MSE): 1.4669148903490017
+Error porcentual absoluto medio (MAPE): 84815136684986.52
+Coeficiente de determinaci n (R-squared): 0.9841762016897208
+
+---------------------------------------------------------------
+(prediccion de datos en 200)
+
+
+Error absoluto medio (MAE): 0.9187739978121782
+Error cuadrado medio (MSE): 1.250005852611957
+Error porcentual absoluto medio (MAPE): 0.03378047432741154
+Coeficiente de determinaci n (R-squared): 0.9995180233187935
+Tminima:
+Error absoluto medio (MAE): 0.6519448068739242
+Error cuadrado medio (MSE): 0.6511112403899153
+Error porcentual absoluto medio (MAPE): 0.04674757755904102
+Coeficiente de determinaci n (R-squared): 0.9996861097883013
+O3:
+Error absoluto medio (MAE): 0.9064806211229051
+Error cuadrado medio (MSE): 1.4535082203058198
+Error porcentual absoluto medio (MAPE): 92936459426078.78
+Coeficiente de determinaci n (R-squared): 0.9843208211520845

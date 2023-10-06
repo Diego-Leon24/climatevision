@@ -1,0 +1,130 @@
+body {
+    background-image: url('https://www.xtrafondos.com/descargar.php?id=7834&resolucion=2560x1440');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    /* Añade margen cero para eliminar el espacio alrededor del cuerpo */
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.container {
+    text-align: center;
+    padding: 30px;
+}
+.input-container {
+    margin-bottom: 30px;
+}
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+.weather-item,
+.forecast-item {
+    border: 4px solid #0e0d0d;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f8f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+.weather-item img,
+.forecast-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Nunito", sans-serif;
+}
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.buttons button {
+    background-color: #fff;
+    color: #f54646;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+.buttons button:hover {
+    background-color: #f54646;
+    color: #fff;
+    transform: scale(1.05);
+}
+.input-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+#getWeatherBtn,
+#getForecastBtn {
+    margin: 0 5px;
+}
+#getForecastBtn {
+    left: 50%;
+}
+.forecast-day {
+    border: 4px solid #0a0a0a;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f4f8f8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.forecast-day h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* Agrega estilos para las tarjetas de pronóstico */
+.forecast-card {
+    background-color: #f8f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.forecast-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.calidadAireInfo {
+    background-color: cornflowerblue;
+}
